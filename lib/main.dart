@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:task_1/presentation/on_boarding/on_boarding_screen.dart';
+import 'package:task_1/features/login/presentation/pages/counter_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: OnBoardingScreen()),
+          home: CounterPage()),
     );
   }
 }
