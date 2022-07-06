@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_1/data/on_boarding.dart';
+import 'package:task_1/features/login/presentation/pages/login_page.dart';
 import 'package:task_1/models/on_boarding_data.dart';
 import 'package:task_1/presentation/on_boarding/widgets/logo.dart';
 import 'package:task_1/presentation/on_boarding/widgets/on_boarding_element.dart';
@@ -67,7 +68,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     height: 45.h,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(primary: kPrimaryColor),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                      },
                       child: Text(
                         "Get Started",
                         style: TextStyle(

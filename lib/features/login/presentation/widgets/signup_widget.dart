@@ -2,14 +2,14 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:task_1/core/util/widgets/my_asset_image.dart';
-import 'package:task_1/features/login/presentation/pages/signup_page.dart';
 import 'package:task_1/my_button.dart';
 
-class LoginWidget extends StatelessWidget {
+
+class SignUpWidget extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
   final phoneController = TextEditingController();
 
-  LoginWidget({Key? key}) : super(key: key);
+  SignUpWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class LoginWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'Sign in',
+                            'Register',
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
@@ -124,7 +124,7 @@ class LoginWidget extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => SignUpPage(),
+                                builder: (context) => const Text('Signed in'),
                               ),
                             );
                           }
@@ -199,14 +199,7 @@ class LoginWidget extends StatelessWidget {
                             width: 10.0,
                           ),
                           TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => SignUpPage(),
-                                ),
-                              );
-                            },
+                            onPressed: () {},
                             child: const Text(
                               'Sign up',
                               style: TextStyle(
